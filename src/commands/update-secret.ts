@@ -55,7 +55,8 @@ export default class UpdateSecrets extends Command {
       }
     )
 
-    const messageBytes = fs.readFileSync(flags.envfile)
+    const messageString = fs.readFileSync(flags.envfile, {encoding: 'base64'})
+    const messageBytes = Buffer.from(messageString)
     const keyBytes = Buffer.from(token.key, 'base64')
 
     const encryptedBytes = sodium.seal(messageBytes, keyBytes)

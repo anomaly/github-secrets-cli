@@ -15,11 +15,11 @@ github-secrets
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g github-secrets
+$ npm install -g github-secrets-cli
 $ github-secrets COMMAND
 running command...
 $ github-secrets (-v|--version|version)
-github-secrets/0.0.0 darwin-x64 node-v12.10.0
+github-secrets-cli/0.0.0 darwin-x64 node-v12.10.0
 $ github-secrets --help [COMMAND]
 USAGE
   $ github-secrets COMMAND
@@ -77,7 +77,7 @@ EXAMPLE
   }
 ```
 
-_See code: [src/commands/secrets.ts](https://github.com/brendon1555/github-secrets/blob/v0.0.0/src/commands/secrets.ts)_
+_See code: [src/commands/secrets.ts](https://github.com/anomaly/github-secrets/blob/v0.0.0/src/commands/secrets.ts)_
 
 ## `github-secrets update-secret`
 
@@ -100,5 +100,5 @@ EXAMPLE
   ...
 ```
 
-_See code: [src/commands/update-secret.ts](https://github.com/brendon1555/github-secrets/blob/v0.0.0/src/commands/update-secret.ts)_
+_See code: [src/commands/update-secret.ts](https://github.com/anomaly/github-secrets/blob/v0.0.0/src/commands/update-secret.ts)_
 <!-- commandsstop -->

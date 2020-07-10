@@ -1,6 +1,11 @@
 {
-  "extends": [
-    "oclif",
-    "oclif-typescript"
-  ]
+  "extends": ["oclif", "oclif-typescript"],
+  "rules": {
+    "@typescript-eslint/member-delimiter-style": {
+      "multiline": {
+        "delimiter": "none",
+        "requireLast": false
+      }
+    }
+  }
 }

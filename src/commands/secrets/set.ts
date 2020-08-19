@@ -110,8 +110,8 @@ export default class SecretsSet extends Command {
         this.log(error)
         this.log('unable to update secret')
       }
-    } catch (e) {
-      this.error(e)
+    } catch (error) {
+      this.error(error)
       this.exit(1)
     }
   }

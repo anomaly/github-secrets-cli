@@ -42,8 +42,8 @@ export default class SecretsGet extends Command {
       )
 
       this.log(result.data)
-    } catch (e) {
-      this.error(e)
+    } catch (error) {
+      this.error(error)
       this.exit(1)
     }
   }

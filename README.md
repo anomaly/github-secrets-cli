@@ -8,9 +8,9 @@ Requires a GitHub Personal Access Token with the `repo` scope for configuration.
 
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/github-secrets-cli.svg)](https://npmjs.org/package/github-secrets-cli)
-[![Downloads/week](https://img.shields.io/npm/dw/github-secrets-cli.svg)](https://npmjs.org/package/github-secrets-cli)
-[![License](https://img.shields.io/npm/l/github-secrets-cli.svg)](https://github.com/anomaly/github-secrets-cli/blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/@anomalyhq/github-secrets-cli.svg)](https://npmjs.org/package/@anomalyhq/github-secrets-cli)
+[![Downloads/week](https://img.shields.io/npm/dw/@anomalyhq/github-secrets-cli.svg)](https://npmjs.org/package/@anomalyhq/github-secrets-cli)
+[![License](https://img.shields.io/npm/l/@anomalyhq/github-secrets-cli.svg)](https://github.com/anomaly/github-secrets-cli/blob/master/package.json)
 
 <!-- toc -->
 * [Usage](#usage)

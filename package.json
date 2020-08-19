@@ -1,5 +1,5 @@
 {
-  "name": "github-secrets-cli",
+  "name": "@anomalyhq/github-secrets-cli",
   "description": "Github secrets manager",
   "version": "1.0.0",
   "author": "Brendon Lees @brendon1555",

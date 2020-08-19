@@ -1,16 +1,17 @@
 github-secrets-cli
 ==================
 
-GitHub Secrets Manager.  
-A simple way to create and update GitHub Secrets for your projects.
-
-Requires a GitHub Personal Access Token with the `repo` scope for configuration. See: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
-
+A CLI based GitHub Secrets Manager.
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@anomalyhq/github-secrets-cli.svg)](https://npmjs.org/package/@anomalyhq/github-secrets-cli)
 [![Downloads/week](https://img.shields.io/npm/dw/@anomalyhq/github-secrets-cli.svg)](https://npmjs.org/package/@anomalyhq/github-secrets-cli)
 [![License](https://img.shields.io/npm/l/@anomalyhq/github-secrets-cli.svg)](https://github.com/anomaly/github-secrets-cli/blob/master/package.json)
+
+ghs provides a command line interface to manage GitHub Secrets for your projects.
+
+_Note:_ You will need a GitHub Personal Access Token with the `repo` scope. Detailed [instructions available in their docs](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
+
 
 <!-- toc -->
 * [Usage](#usage)
@@ -120,3 +121,7 @@ OPTIONS
 
 _See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.0/src/commands/secrets/set.ts)_
 <!-- commandsstop -->
+
+
+# License
+Distributed under the Apache 2.0 License. See `LICENSE` for further information.

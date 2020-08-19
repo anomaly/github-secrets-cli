@@ -1,4 +1,3 @@
-import emoji from 'node-emoji'
 import chalk from 'chalk'
 import path from 'path'
 import fs from 'fs-extra'

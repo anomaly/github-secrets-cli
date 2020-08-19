@@ -8,7 +8,7 @@ export default class ConfigGet extends Command {
     try {
       this.log(JSON.stringify(await configuration(this)))
     } catch (error) {
-      this.error(error || 'A Stream CLI error has occurred.', {
+      this.error(error || 'A GHS CLI error has occurred.', {
         exit: 1,
       })
     }

@@ -6,7 +6,7 @@ import sodium from 'tweetsodium'
 import {configuration} from '../../utils/config'
 
 export default class SecretsSet extends Command {
-  static description = 'describe the command here'
+  static description = 'Update/Create a secret'
 
   static flags = {
     help: flags.help({char: 'h'}),

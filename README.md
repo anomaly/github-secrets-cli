@@ -1,7 +1,11 @@
 github-secrets-cli
 ==================
 
-Github secrets manager
+GitHub Secrets Manager.  
+A simple way to create and update GitHub Secrets for your projects.
+
+Requires a GitHub Personal Access Token with the `repo` scope for configuration. See: https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token
+
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/github-secrets-cli.svg)](https://npmjs.org/package/github-secrets-cli)
@@ -47,7 +51,7 @@ _See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secret
 
 ## `ghs config:set`
 
-describe the command here
+Update you configuration
 
 ```
 USAGE
@@ -80,7 +84,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0
 
 ## `ghs secrets:get`
 
-describe the command here
+Fetch a list os set secrets (cannot read secret values)
 
 ```
 USAGE
@@ -97,7 +101,7 @@ _See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secre
 
 ## `ghs secrets:set`
 
-describe the command here
+Update/Create a secret
 
 ```
 USAGE

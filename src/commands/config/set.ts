@@ -5,7 +5,7 @@ import emoji from 'node-emoji'
 import path from 'path'
 
 export default class ConfigSet extends Command {
-  static description = 'describe the command here'
+  static description = 'Update you configuration'
 
   static flags = {
     org: flags.string({

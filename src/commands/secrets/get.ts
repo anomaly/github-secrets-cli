@@ -3,7 +3,7 @@ import {request} from '@octokit/request'
 import {configuration} from '../../utils/config'
 
 export default class SecretsGet extends Command {
-  static description = 'describe the command here'
+  static description = 'Fetch a list os set secrets (cannot read secret values)'
 
   static flags = {
     help: flags.help({char: 'h'}),

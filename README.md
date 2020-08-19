@@ -19,11 +19,11 @@ Requires a GitHub Personal Access Token with the `repo` scope for configuration.
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g github-secrets-cli
+$ npm install -g @anomalyhq/github-secrets-cli
 $ ghs COMMAND
 running command...
 $ ghs (-v|--version|version)
-github-secrets-cli/1.0.0 darwin-x64 node-v12.10.0
+@anomalyhq/github-secrets-cli/1.0.0 darwin-x64 node-v12.10.0
 $ ghs --help [COMMAND]
 USAGE
   $ ghs COMMAND

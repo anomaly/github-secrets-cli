@@ -10,8 +10,8 @@ A CLI based GitHub Secrets Manager.
 
 ghs provides a command line interface to manage GitHub Secrets for your projects.
 
-_Note:_ You will need a GitHub Personal Access Token with the `repo` scope. Detailed [instructions available in their docs](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)
-
+_Note:_ You will need a GitHub Personal Access Token with the `repo` scope. Detailed [instructions available in their docs](https://docs.github.com/en/github/authenticating-to-github/creating-a-personal-access-token)  
+You can [Click Here](https://github.com/settings/tokens/new?scopes=repo&description=GitHub%20Secrets%20CLI) to quickly set up a key with the required permissions.
 
 <!-- toc -->
 * [Usage](#usage)

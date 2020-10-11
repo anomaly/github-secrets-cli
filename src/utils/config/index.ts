@@ -1,7 +1,8 @@
 import chalk from 'chalk'
 import path from 'path'
 import fs from 'fs-extra'
-import Command from '@oclif/command'
+import { Command } from '@oclif/command'
+import { CLIError } from '@oclif/errors'
 
 interface Config {
   org: string
@@ -21,7 +22,7 @@ export async function configuration(ctx: Command) {
       })
     }
 
-    const {org, repo, personalAccessToken}: Config = await fs.readJson(config)
+    const { org, repo, personalAccessToken }: Config = await fs.readJson(config)
 
     if (!org || !repo || !personalAccessToken) {
       ctx.warn(
@@ -39,7 +40,7 @@ export async function configuration(ctx: Command) {
       personalAccessToken,
     }
   } catch (error) {
-    ctx.error(error || 'A GHS CLI error has occurred.', {
+    ctx.error(new CLIError(error) || 'A GHS CLI error has occurred.', {
       exit: 1,
     })
   }

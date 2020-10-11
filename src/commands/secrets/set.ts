@@ -1,15 +1,16 @@
-import {Command, flags} from '@oclif/command'
-import {request} from '@octokit/request'
+import { Command, flags } from '@oclif/command'
+import { CLIError } from '@oclif/errors'
+import { request } from '@octokit/request'
 import cli from 'cli-ux'
 import fs from 'fs-extra'
 import sodium from 'tweetsodium'
-import {configuration} from '../../utils/config'
+import { configuration } from '../../utils/config'
 
 export default class SecretsSet extends Command {
   static description = 'Update/Create a secret'
 
   static flags = {
-    help: flags.help({char: 'h'}),
+    help: flags.help({ char: 'h' }),
     personalAccessToken: flags.string({
       char: 't',
       description: 'Your GitHub Personal Access Token.',
@@ -20,7 +21,7 @@ export default class SecretsSet extends Command {
       description: 'Organisation the repo belongs to.',
       required: false,
     }),
-    repo: flags.string({char: 'r', description: 'Name of the repo.', required: false}),
+    repo: flags.string({ char: 'r', description: 'Name of the repo.', required: false }),
     file: flags.string({
       char: 'f',
       description: 'Location of a file to create a secret from',
@@ -45,7 +46,7 @@ export default class SecretsSet extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(SecretsSet)
+    const { flags } = this.parse(SecretsSet)
 
     try {
       const conf = await configuration(this)
@@ -54,11 +55,11 @@ export default class SecretsSet extends Command {
         headers: {
           authorization: `token ${
             flags.personalAccessToken ?? conf.personalAccessToken
-          }`,
+            }`,
         },
       })
 
-      const {data: token} = await requestWithAuth(
+      const { data: token } = await requestWithAuth(
         'GET /repos/{owner}/{repo}/actions/secrets/public-key',
         {
           owner: flags.org ?? conf.org,
@@ -111,7 +112,7 @@ export default class SecretsSet extends Command {
         this.log('unable to update secret')
       }
     } catch (error) {
-      this.error(error)
+      this.error(new CLIError(error))
       this.exit(1)
     }
   }

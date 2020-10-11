@@ -1,5 +1,6 @@
-import {Command} from '@oclif/command'
-import {configuration} from '../../utils/config'
+import { Command } from '@oclif/command'
+import { CLIError } from '@oclif/errors'
+import { configuration } from '../../utils/config'
 
 export default class ConfigGet extends Command {
   static description = 'Outputs your configuration.'
@@ -8,7 +9,7 @@ export default class ConfigGet extends Command {
     try {
       this.log(JSON.stringify(await configuration(this)))
     } catch (error) {
-      this.error(error || 'A GHS CLI error has occurred.', {
+      this.error(new CLIError(error) || 'A GHS CLI error has occurred.', {
         exit: 1,
       })
     }

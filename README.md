@@ -53,7 +53,7 @@ _See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secret
 
 ## `ghs config:set`
 
-Update you configuration
+Update your configuration
 
 ```
 USAGE
@@ -86,7 +86,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0
 
 ## `ghs secrets:get`
 
-Fetch a list os set secrets (cannot read secret values)
+Fetch a list of set secrets (cannot read secret values)
 
 ```
 USAGE

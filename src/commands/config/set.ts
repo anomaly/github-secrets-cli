@@ -1,12 +1,12 @@
-import { Command, flags } from '@oclif/command'
-import { CLIError } from '@oclif/errors'
+import {Command, flags} from '@oclif/command'
+import {CLIError} from '@oclif/errors'
 import cli from 'cli-ux'
 import fs from 'fs-extra'
 import emoji from 'node-emoji'
 import path from 'path'
 
 export default class ConfigSet extends Command {
-  static description = 'Update you configuration'
+  static description = 'Update your configuration'
 
   static flags = {
     org: flags.string({
@@ -27,7 +27,7 @@ export default class ConfigSet extends Command {
   }
 
   async run() {
-    const { flags } = this.parse(ConfigSet)
+    const {flags} = this.parse(ConfigSet)
     const config = path.join(this.config.configDir, 'config.json')
 
     try {
@@ -38,7 +38,7 @@ export default class ConfigSet extends Command {
         flags.repo = await cli.prompt('What is the name of the repo?')
         flags.personalAccessToken = await cli.prompt(
           'What is your GitHub Personal Access Token?',
-          { type: 'hide' }
+          {type: 'hide'}
         )
       }
 
@@ -53,7 +53,7 @@ export default class ConfigSet extends Command {
         'Your GHS CLI configuration has been generated!',
         emoji.get('rocket')
       )
-      this.exit()
+      // this.exit(0)
     } catch (error) {
       this.error(new CLIError(error) || 'A GHS CLI error has occurred.', {
         exit: 1,

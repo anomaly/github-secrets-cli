@@ -1,13 +1,13 @@
-import { Command, flags } from '@oclif/command'
-import { CLIError } from '@oclif/errors'
-import { request } from '@octokit/request'
-import { configuration } from '../../utils/config'
+import {Command, flags} from '@oclif/command'
+import {CLIError} from '@oclif/errors'
+import {request} from '@octokit/request'
+import {configuration} from '../../utils/config'
 
 export default class SecretsGet extends Command {
-  static description = 'Fetch a list os set secrets (cannot read secret values)'
+  static description = 'Fetch a list of set secrets (cannot read secret values)'
 
   static flags = {
-    help: flags.help({ char: 'h' }),
+    help: flags.help({char: 'h'}),
     personalAccessToken: flags.string({
       char: 't',
       description: 'Your GitHub Personal Access Token.',
@@ -18,19 +18,24 @@ export default class SecretsGet extends Command {
       description: 'Organisation the repo belongs to.',
       required: false,
     }),
-    repo: flags.string({ char: 'r', description: 'Name of the repo.', required: false }),
+    repo: flags.string({
+      char: 'r',
+      description: 'Name of the repo.',
+      required: false,
+    }),
   }
 
   async run() {
-    const { flags } = this.parse(SecretsGet)
+    const {flags} = this.parse(SecretsGet)
 
     try {
       const conf = await configuration(this)
 
       const requestWithAuth = request.defaults({
         headers: {
-          authorization: `token ${flags.personalAccessToken ?? conf.personalAccessToken
-            }`,
+          authorization: `token ${
+            flags.personalAccessToken ?? conf.personalAccessToken
+          }`,
         },
       })
       const result = await requestWithAuth(

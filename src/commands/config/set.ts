@@ -1,4 +1,5 @@
-import {Command, flags} from '@oclif/command'
+import { Command, flags } from '@oclif/command'
+import { CLIError } from '@oclif/errors'
 import cli from 'cli-ux'
 import fs from 'fs-extra'
 import emoji from 'node-emoji'
@@ -26,7 +27,7 @@ export default class ConfigSet extends Command {
   }
 
   async run() {
-    const {flags} = this.parse(ConfigSet)
+    const { flags } = this.parse(ConfigSet)
     const config = path.join(this.config.configDir, 'config.json')
 
     try {
@@ -37,7 +38,7 @@ export default class ConfigSet extends Command {
         flags.repo = await cli.prompt('What is the name of the repo?')
         flags.personalAccessToken = await cli.prompt(
           'What is your GitHub Personal Access Token?',
-          {type: 'hide'}
+          { type: 'hide' }
         )
       }
 
@@ -54,7 +55,7 @@ export default class ConfigSet extends Command {
       )
       this.exit()
     } catch (error) {
-      this.error(error || 'A GHS CLI error has occurred.', {
+      this.error(new CLIError(error) || 'A GHS CLI error has occurred.', {
         exit: 1,
       })
     }

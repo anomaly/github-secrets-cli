@@ -25,7 +25,7 @@ $ npm install -g @anomalyhq/github-secrets-cli
 $ ghs COMMAND
 running command...
 $ ghs (-v|--version|version)
-@anomalyhq/github-secrets-cli/1.0.1 darwin-x64 node-v12.10.0
+@anomalyhq/github-secrets-cli/1.0.2 darwin-x64 node-v12.10.0
 $ ghs --help [COMMAND]
 USAGE
   $ ghs COMMAND
@@ -49,7 +49,7 @@ USAGE
   $ ghs config:get
 ```
 
-_See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.1/src/commands/config/get.ts)_
+_See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.2/src/commands/config/get.ts)_
 
 ## `ghs config:set`
 
@@ -65,7 +65,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/config/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.1/src/commands/config/set.ts)_
+_See code: [src/commands/config/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.2/src/commands/config/set.ts)_
 
 ## `ghs help [COMMAND]`
 
@@ -99,7 +99,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.1/src/commands/secrets/get.ts)_
+_See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.2/src/commands/secrets/get.ts)_
 
 ## `ghs secrets:set`
 
@@ -120,7 +120,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.1/src/commands/secrets/set.ts)_
+_See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.2/src/commands/secrets/set.ts)_
 <!-- commandsstop -->
 
 

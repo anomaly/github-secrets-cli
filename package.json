@@ -1,7 +1,7 @@
 {
   "name": "@anomalyhq/github-secrets-cli",
   "description": "Github secrets manager",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Brendon Lees @brendon1555",
   "bin": {
     "ghs": "./bin/run"
@@ -10,6 +10,7 @@
   "dependencies": {
     "@oclif/command": "^1",
     "@oclif/config": "^1",
+    "@oclif/errors": "^1",
     "@oclif/plugin-help": "^3",
     "@octokit/request": "^5.4.5",
     "fs-extra": "^9.0.1",

@@ -1,7 +1,7 @@
 {
   "name": "@anomalyhq/github-secrets-cli",
   "description": "Github secrets manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Brendon Lees @brendon1555",
   "bin": {
     "ghs": "./bin/run"

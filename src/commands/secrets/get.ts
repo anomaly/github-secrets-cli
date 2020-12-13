@@ -46,7 +46,7 @@ export default class SecretsGet extends Command {
         }
       )
 
-      this.log(result.data)
+      this.log(JSON.stringify(result.data))
     } catch (error) {
       this.error(new CLIError(error))
       this.exit(1)

@@ -28,22 +28,22 @@ export default class SecretsSet extends Command {
     }),
     file: flags.string({
       char: 'f',
-      description: 'Location of a file to create a secret from',
+      description: 'Location of a file to create a secret from.',
       required: false,
     }),
     input: flags.string({
       char: 'i',
-      description: 'String to create a secret from',
+      description: 'String to create a secret from.',
       required: false,
     }),
     secret: flags.string({
       char: 's',
-      description: 'GitHub Secret to update/create',
+      description: 'GitHub Secret to update/create.',
       required: true,
     }),
     base64: flags.boolean({
       char: 'b',
-      description: 'base64 the string before encoding',
+      description: 'base64 the string before encoding.',
       required: false,
       default: false,
     }),

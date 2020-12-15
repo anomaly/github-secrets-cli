@@ -25,7 +25,7 @@ $ npm install -g @anomalyhq/github-secrets-cli
 $ ghs COMMAND
 running command...
 $ ghs (-v|--version|version)
-@anomalyhq/github-secrets-cli/1.0.3 darwin-x64 node-v12.10.0
+@anomalyhq/github-secrets-cli/1.1.0 darwin-x64 node-v12.10.0
 $ ghs --help [COMMAND]
 USAGE
   $ ghs COMMAND
@@ -50,7 +50,7 @@ USAGE
   $ ghs config:get
 ```
 
-_See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/config/get.ts)_
+_See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/config/get.ts)_
 
 ## `ghs config:set`
 
@@ -66,7 +66,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/config/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/config/set.ts)_
+_See code: [src/commands/config/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/config/set.ts)_
 
 ## `ghs help [COMMAND]`
 
@@ -100,7 +100,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/secrets/get.ts)_
+_See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/get.ts)_
 
 ## `ghs secrets:remove`
 
@@ -119,7 +119,7 @@ OPTIONS
   -y, --autoYes                                  Skips user confirmation.
 ```
 
-_See code: [src/commands/secrets/remove.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/secrets/remove.ts)_
+_See code: [src/commands/secrets/remove.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/remove.ts)_
 
 ## `ghs secrets:set`
 
@@ -140,7 +140,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/secrets/set.ts)_
+_See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/set.ts)_
 <!-- commandsstop -->
 
 

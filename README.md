@@ -38,6 +38,7 @@ USAGE
 * [`ghs config:set`](#ghs-configset)
 * [`ghs help [COMMAND]`](#ghs-help-command)
 * [`ghs secrets:get`](#ghs-secretsget)
+* [`ghs secrets:remove`](#ghs-secretsremove)
 * [`ghs secrets:set`](#ghs-secretsset)
 
 ## `ghs config:get`
@@ -101,6 +102,25 @@ OPTIONS
 
 _See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/secrets/get.ts)_
 
+## `ghs secrets:remove`
+
+Remove a secret
+
+```
+USAGE
+  $ ghs secrets:remove
+
+OPTIONS
+  -h, --help                                     show CLI help
+  -o, --org=org                                  Organisation the repo belongs to.
+  -r, --repo=repo                                Name of the repo.
+  -s, --secret=secret                            (required) GitHub Secret to remove.
+  -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
+  -y, --autoYes                                  Skips user confirmation.
+```
+
+_See code: [src/commands/secrets/remove.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.0.3/src/commands/secrets/remove.ts)_
+
 ## `ghs secrets:set`
 
 Update/Create a secret
@@ -110,13 +130,13 @@ USAGE
   $ ghs secrets:set
 
 OPTIONS
-  -b, --base64                                   base64 the string before encoding
-  -f, --file=file                                Location of a file to create a secret from
+  -b, --base64                                   base64 the string before encoding.
+  -f, --file=file                                Location of a file to create a secret from.
   -h, --help                                     show CLI help
-  -i, --input=input                              String to create a secret from
+  -i, --input=input                              String to create a secret from.
   -o, --org=org                                  Organisation the repo belongs to.
   -r, --repo=repo                                Name of the repo.
-  -s, --secret=secret                            (required) GitHub Secret to update/create
+  -s, --secret=secret                            (required) GitHub Secret to update/create.
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 

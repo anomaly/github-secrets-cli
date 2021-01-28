@@ -110,10 +110,9 @@ export default class SecretsSet extends Command {
             key_id: token.key_id,
           }
         )
-        this.log('secret updated')
+        this.log(`Updated secret: ${flags.secret}`)
       } catch (error) {
-        this.error(error)
-        this.log('unable to update secret')
+        this.error(`Unable to update secret: ${flags.secret} \n${error}`)
       }
     } catch (error) {
       this.error(new CLIError(error), {exit: 1})

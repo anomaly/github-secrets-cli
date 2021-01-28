@@ -25,7 +25,7 @@ $ npm install -g @anomalyhq/github-secrets-cli
 $ ghs COMMAND
 running command...
 $ ghs (-v|--version|version)
-@anomalyhq/github-secrets-cli/1.1.0 darwin-x64 node-v12.10.0
+@anomalyhq/github-secrets-cli/1.1.0 darwin-x64 node-v14.15.4
 $ ghs --help [COMMAND]
 USAGE
   $ ghs COMMAND
@@ -40,6 +40,7 @@ USAGE
 * [`ghs secrets:get`](#ghs-secretsget)
 * [`ghs secrets:remove`](#ghs-secretsremove)
 * [`ghs secrets:set`](#ghs-secretsset)
+* [`ghs secrets:sync [FILE]`](#ghs-secretssync-file)
 
 ## `ghs config:get`
 
@@ -141,6 +142,22 @@ OPTIONS
 ```
 
 _See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/set.ts)_
+
+## `ghs secrets:sync [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ ghs secrets:sync [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/secrets/sync.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/sync.ts)_
 <!-- commandsstop -->
 
 

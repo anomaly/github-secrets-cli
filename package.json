@@ -1,7 +1,7 @@
 {
   "name": "@anomalyhq/github-secrets-cli",
   "description": "Github secrets manager",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Brendon Lees @brendon1555",
   "bin": {
     "ghs": "./bin/run"
@@ -11,10 +11,13 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/errors": "^1",
-    "@oclif/plugin-help": "^3",
-    "@octokit/request": "^5.4.5",
+    "@oclif/plugin-help": "^3.2.1",
+    "@octokit/request": "^5.4.13",
+    "@types/js-yaml": "^4.0.0",
     "cli-ux": "^5.5.0",
-    "fs-extra": "^9.0.1",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.1.0",
+    "js-yaml": "^4.0.0",
     "node-emoji": "^1.10.0",
     "tslib": "^1",
     "tweetsodium": "^0.0.5"
@@ -23,9 +26,9 @@
     "@oclif/dev-cli": "^1",
     "@oclif/test": "^1",
     "@types/chai": "^4",
-    "@types/fs-extra": "^9.0.1",
+    "@types/fs-extra": "^9.0.6",
     "@types/mocha": "^5",
-    "@types/node": "^14.0.20",
+    "@types/node": "^14.14.22",
     "@types/node-emoji": "^1.8.1",
     "chai": "^4",
     "eslint": "^5.13",

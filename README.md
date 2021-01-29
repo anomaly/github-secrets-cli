@@ -25,7 +25,7 @@ $ npm install -g @anomalyhq/github-secrets-cli
 $ ghs COMMAND
 running command...
 $ ghs (-v|--version|version)
-@anomalyhq/github-secrets-cli/1.1.0 darwin-x64 node-v14.15.4
+@anomalyhq/github-secrets-cli/1.2.0 darwin-x64 node-v14.15.4
 $ ghs --help [COMMAND]
 USAGE
   $ ghs COMMAND
@@ -40,7 +40,7 @@ USAGE
 * [`ghs secrets:get`](#ghs-secretsget)
 * [`ghs secrets:remove`](#ghs-secretsremove)
 * [`ghs secrets:set`](#ghs-secretsset)
-* [`ghs secrets:sync [FILE]`](#ghs-secretssync-file)
+* [`ghs secrets:sync FILE`](#ghs-secretssync-file)
 
 ## `ghs config:get`
 
@@ -51,7 +51,7 @@ USAGE
   $ ghs config:get
 ```
 
-_See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/config/get.ts)_
+_See code: [src/commands/config/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.2.0/src/commands/config/get.ts)_
 
 ## `ghs config:set`
 
@@ -67,7 +67,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/config/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/config/set.ts)_
+_See code: [src/commands/config/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.2.0/src/commands/config/set.ts)_
 
 ## `ghs help [COMMAND]`
 
@@ -84,7 +84,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.0/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.1/src/commands/help.ts)_
 
 ## `ghs secrets:get`
 
@@ -101,7 +101,7 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/get.ts)_
+_See code: [src/commands/secrets/get.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.2.0/src/commands/secrets/get.ts)_
 
 ## `ghs secrets:remove`
 
@@ -120,7 +120,7 @@ OPTIONS
   -y, --autoYes                                  Skips user confirmation.
 ```
 
-_See code: [src/commands/secrets/remove.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/remove.ts)_
+_See code: [src/commands/secrets/remove.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.2.0/src/commands/secrets/remove.ts)_
 
 ## `ghs secrets:set`
 
@@ -141,23 +141,29 @@ OPTIONS
   -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/set.ts)_
+_See code: [src/commands/secrets/set.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.2.0/src/commands/secrets/set.ts)_
 
-## `ghs secrets:sync [FILE]`
+## `ghs secrets:sync FILE`
 
-describe the command here
+Add/Update multiple secrets from one file.
 
 ```
 USAGE
-  $ ghs secrets:sync [FILE]
+  $ ghs secrets:sync FILE
+
+ARGUMENTS
+  FILE  Path to the file to read from.
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -b, --base64                                   base64 the values before encoding.
+  -f, --format=env|json|yaml                     (required) File format to parse secrets from.
+  -h, --help                                     show CLI help
+  -o, --org=org                                  Organisation the repo belongs to.
+  -r, --repo=repo                                Name of the repo.
+  -t, --personalAccessToken=personalAccessToken  Your GitHub Personal Access Token.
 ```
 
-_See code: [src/commands/secrets/sync.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.1.0/src/commands/secrets/sync.ts)_
+_See code: [src/commands/secrets/sync.ts](https://github.com/anomaly/github-secrets-cli/blob/v1.2.0/src/commands/secrets/sync.ts)_
 <!-- commandsstop -->
 
 

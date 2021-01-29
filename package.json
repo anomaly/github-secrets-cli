@@ -13,9 +13,11 @@
     "@oclif/errors": "^1",
     "@oclif/plugin-help": "^3.2.1",
     "@octokit/request": "^5.4.13",
+    "@types/js-yaml": "^4.0.0",
     "cli-ux": "^5.5.0",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.1.0",
+    "js-yaml": "^4.0.0",
     "node-emoji": "^1.10.0",
     "tslib": "^1",
     "tweetsodium": "^0.0.5"

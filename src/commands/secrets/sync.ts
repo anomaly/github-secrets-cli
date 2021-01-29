@@ -5,6 +5,9 @@ import {request} from '@octokit/request'
 import fs from 'fs-extra'
 import sodium from 'tweetsodium'
 import {configuration} from '../../utils/config'
+import yaml from 'js-yaml'
+
+type Env = {[env: string]: string}
 
 export default class SecretsSync extends Command {
   static description = 'describe the command here'
@@ -32,9 +35,19 @@ export default class SecretsSync extends Command {
       required: false,
       default: false,
     }),
+    format: flags.string({
+      char: 'f',
+      description: 'File format to parse secrets from.',
+      required: true,
+      options: ['env', 'json', 'yaml'],
+    }),
   }
 
-  static args = [{name: 'file'}]
+  static args = [{
+    name: 'file', 
+    required: true,
+    description: 'Path to the file to read from.'
+  }]
 
   async run() {
     const {args, flags} = this.parse(SecretsSync)
@@ -43,11 +56,39 @@ export default class SecretsSync extends Command {
       if (!args.file) {
         this.error(new CLIError('Please provide a file'))
       }
-      const messageString = fs.readFileSync(args.file)
-      const output = dotenv.parse(messageString, {debug: true})
-      this.log(typeof output, output)
-      if (Object.keys(output).length === 0 || output.constructor !== Object) {
-        this.error('File is either empty or not a valid .env format')
+      const messageString = fs.readFileSync(args.file, 'utf-8')
+
+      let output: Env = {}
+
+      switch (flags.format) {
+        case 'env':
+          output = dotenv.parse(messageString, {debug: true})
+          // Check that the parser could read anything valid from the file
+          if (
+            Object.keys(output).length === 0 ||
+            output.constructor !== Object
+          ) {
+            this.error('File is either empty or not a valid .env format')
+          }
+          break
+        case 'json':
+          try {
+            output = JSON.parse(messageString)
+            // Check that the parser could read anything valid from the file
+          } catch (error) {
+            this.error('File is either empty or not a valid json format')
+          }
+          break
+        case 'yaml':
+          output = yaml.load(messageString) as Env
+          // Check that the parser could read anything valid from the file
+          if (
+            Object.keys(output).length === 0 ||
+            output?.constructor !== Object
+          ) {
+            this.error('File is either empty or not a valid yaml format')
+          }
+          break
       }
 
       const conf = await configuration(this)
@@ -71,7 +112,7 @@ export default class SecretsSync extends Command {
       Object.keys(output).forEach(async key => {
         let value = output[key]
         if (flags.base64) {
-          value = btoa(value)
+          value = Buffer.from(value).toString('base64')
         }
 
         const messageBytes = Buffer.from(value)

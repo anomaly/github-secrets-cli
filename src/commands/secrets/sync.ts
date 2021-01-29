@@ -10,7 +10,7 @@ import yaml from 'js-yaml'
 type Env = {[env: string]: string}
 
 export default class SecretsSync extends Command {
-  static description = 'describe the command here'
+  static description = 'Add/Update multiple secrets from one file.'
 
   static flags = {
     help: flags.help({char: 'h'}),
@@ -43,11 +43,13 @@ export default class SecretsSync extends Command {
     }),
   }
 
-  static args = [{
-    name: 'file', 
-    required: true,
-    description: 'Path to the file to read from.'
-  }]
+  static args = [
+    {
+      name: 'file',
+      required: true,
+      description: 'Path to the file to read from.',
+    },
+  ]
 
   async run() {
     const {args, flags} = this.parse(SecretsSync)
